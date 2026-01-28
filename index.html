@@ -3,67 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kano Technology transforma empresas obsoletas en ecosistemas digitales automatizados con IA y desarrollo web a medida.">
-    <title>Kano Technology | Automatización y Desarrollo Web con IA</title>
+    <meta name="description" content="Kano Technology transforma empresas obsoletas en ecosistemas digitales automatizados con IA y Desarrollo Web High-End.">
+    <title>Kano Technology | Automatización IA & Desarrollo Web</title>
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
     
     <link rel="stylesheet" href="style.css">
     
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700;variable&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar" id="navbar">
         <div class="container navbar__container">
             <a href="#" class="navbar__logo">KANO<span class="text-gradient">.TECH</span></a>
-            <ul class="navbar__menu">
-                <li><a href="#problema">Problema</a></li>
-                <li><a href="#soluciones">Soluciones</a></li>
-                <li><a href="#resultados">Resultados</a></li>
-                <li><a href="#faq">FAQ</a></li>
-            </ul>
-            <a href="#contacto" class="btn btn--primary btn--sm">Auditoría Gratis</a>
+            
+            <div class="navbar__actions">
+                <ul class="navbar__menu">
+                    <li><a href="#problema">Problema</a></li>
+                    <li><a href="#soluciones">Soluciones</a></li>
+                    <li><a href="#resultados">Resultados</a></li>
+                </ul>
+                <button onclick="openCalendly()" class="btn btn--primary btn--sm">Auditoría Gratis</button>
+            </div>
         </div>
     </nav>
 
     <main>
         <section class="hero">
+            <canvas id="particles-canvas"></canvas>
+            
             <div class="hero__bg-glow"></div>
+            
             <div class="container hero__container">
                 <div class="hero__content reveal">
-                    <div class="badge">🚀 Web Design Trends 2028</div>
+                    <div class="badge-pill">
+                        <span class="dot"></span> 🚀 Tendencias Web 2026
+                    </div>
                     <h1 class="hero__title">
-                        Tu negocio está perdiendo dinero por ser <span class="text-gradient">lento.</span>
+                        Tu negocio pierde dinero por ser <span class="text-gradient">lento.</span>
                     </h1>
                     <p class="hero__subtitle">
-                        En Kano, transformamos empresas obsoletas en ecosistemas digitales automatizados con <strong>Inteligencia Artificial</strong> y <strong>Código a Medida</strong>.
+                        Transformamos empresas analógicas en ecosistemas digitales automatizados con <strong>Inteligencia Artificial</strong> y <strong>Código a Medida</strong>.
                     </p>
-                    <div class="hero__actions">
-                        <a href="#contacto" class="btn btn--primary">Auditoría Gratuita</a>
+                    <div class="hero__buttons">
+                        <button onclick="openCalendly()" class="btn btn--primary glow-pulse">Agendar Auditoría</button>
                         <a href="#resultados" class="btn btn--secondary">Ver Casos de Éxito</a>
                     </div>
+                    
                     <div class="hero__stats">
-                        <div class="stat-item">
-                            <span class="stat-number">+200%</span>
-                            <span class="stat-label">Conversión</span>
+                        <div class="stat">
+                            <strong>+200%</strong>
+                            <span>Conversión</span>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Automatización</span>
+                        <div class="stat">
+                            <strong>24/7</strong>
+                            <span>Automatización</span>
+                        </div>
+                        <div class="stat">
+                            <strong>0.5s</strong>
+                            <span>Carga Web</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="hero__visual reveal delay-200">
-                    <div class="dashboard-mockup">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop" alt="Dashboard Futurista de Analítica e IA" loading="lazy">
-                        <div class="floating-card glass">
-                            <div class="icon-circle">🤖</div>
-                            <div>
-                                <small>Kano AI Bot</small>
-                                <p>Lead cualificado ✅</p>
+                    <div class="dashboard-mockup tilt-element" id="heroTilt">
+                        <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=2232&auto=format&fit=crop" alt="Kano AI Dashboard Interface" class="mockup-img">
+                        
+                        <div class="floating-card glass card-1">
+                            <div class="icon-box purple">🤖</div>
+                            <div class="float-content">
+                                <small>AI Agent</small>
+                                <strong>Venta Cerrada $4,500</strong>
+                            </div>
+                        </div>
+                        <div class="floating-card glass card-2">
+                            <div class="icon-box cyan">⚡</div>
+                            <div class="float-content">
+                                <small>Performance</small>
+                                <strong>99/100 Google</strong>
                             </div>
                         </div>
                     </div>
@@ -76,18 +99,8 @@
                 <div class="section-header reveal">
                     <h2 class="section-title">El mercado no espera a <span class="text-accent">nadie.</span></h2>
                     <p class="section-desc">
-                        Webs lentas, procesos manuales y falta de estrategia están matando tu facturación. Mientras tú duermes, tu competencia usa IA. Nosotros nivelamos el juego a tu favor.
+                        Webs lentas, procesos manuales y falta de estrategia están matando tu facturación. Mientras tú duermes, tu competencia usa IA.
                     </p>
-                </div>
-                
-                <div class="problem__visual reveal delay-200">
-                    <div class="timeline-line"></div>
-                    <div class="problem__icon-wrapper">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                        </svg>
-                    </div>
-                    <a href="#soluciones" class="btn btn--text">Conoce el Método Kano &rarr;</a>
                 </div>
             </div>
         </section>
@@ -96,35 +109,29 @@
             <div class="container">
                 <div class="grid-4">
                     <article class="card glass reveal">
-                        <div class="card__icon cyan">
-                            <code>&lt;/&gt;</code>
-                        </div>
-                        <h3>Desarrollo Web Next.js</h3>
-                        <p>Velocidad extrema y SEO técnico impecable. Google amará tu sitio y tus clientes no esperarán ni un segundo.</p>
+                        <div class="card__icon cyan"><code>&lt;/&gt;</code></div>
+                        <h3>Desarrollo Next.js</h3>
+                        <p>Velocidad extrema. Arquitectura moderna que Google ama.</p>
+                        <button class="btn-text" onclick="openCaseStudy('dev')">Ver métricas &rarr;</button>
                     </article>
 
                     <article class="card glass reveal delay-100">
-                        <div class="card__icon purple">
-                            🤖
-                        </div>
-                        <h3>Automatización con IA</h3>
-                        <p>Chatbots y agentes autónomos que cierran ventas, agendan citas y resuelven dudas 24/7 sin sueldo.</p>
+                        <div class="card__icon purple">🤖</div>
+                        <h3>Automatización IA</h3>
+                        <p>Agentes autónomos que cierran ventas sin sueldo.</p>
+                        <button class="btn-text" onclick="openCaseStudy('ai')">Ver métricas &rarr;</button>
                     </article>
 
                     <article class="card glass reveal delay-200">
-                        <div class="card__icon cyan">
-                            ✒️
-                        </div>
-                        <h3>Copywriting Persuasivo</h3>
-                        <p>No escribimos relleno. Diseñamos textos estratégicos enfocados puramente en convertir visitas en dinero.</p>
+                        <div class="card__icon cyan">✒️</div>
+                        <h3>Copywriting</h3>
+                        <p>Psicología de ventas aplicada a cada palabra.</p>
                     </article>
 
                     <article class="card glass reveal delay-300">
-                        <div class="card__icon purple">
-                            🌐
-                        </div>
-                        <h3>SaaS & Plataformas</h3>
-                        <p>Arquitectura escalable para tu propia aplicación o tienda online a medida. Construido para crecer.</p>
+                        <div class="card__icon purple">🌐</div>
+                        <h3>SaaS & Apps</h3>
+                        <p>Plataformas escalables para dominar tu nicho.</p>
                     </article>
                 </div>
             </div>
@@ -133,89 +140,51 @@
         <section id="resultados" class="social-proof">
             <div class="container">
                 <div class="social-proof__header reveal">
-                    <h2 class="section-title">Resultados, no promesas.</h2>
-                    <div class="rating-badge">
-                        <span class="stars">★★★★★</span>
-                        <strong>4.9/5</strong> Calificación Promedio
+                    <h2 class="section-title">Resultados Reales</h2>
+                    <div class="rating">
+                        ★★★★★ <span>4.9/5 Promedio en Clutch</span>
                     </div>
                 </div>
 
                 <div class="testimonials-grid">
-                    <div class="testimonial-card glass reveal">
-                        <p class="quote">"Duplicaron mis leads en solo 30 días. La velocidad de la nueva web es impresionante."</p>
+                    <div class="testimonial glass reveal">
+                        <p>"Duplicaron mis leads en 30 días. La inversión se pagó sola en la primera semana."</p>
                         <div class="author">
-                            <div class="avatar"></div> <div>
-                                <h4>Carlos M.</h4>
-                                <small>Dueño de E-commerce</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card glass reveal delay-100">
-                        <p class="quote">"El sistema automatizado me ahorra 20 horas a la semana. Ahora mi equipo se enfoca en vender."</p>
-                        <div class="author">
-                            <div class="avatar"></div>
+                            <div class="avatar gradient-1">CM</div>
                             <div>
-                                <h4>Ana R.</h4>
-                                <small>CEO Agencia Marketing</small>
+                                <strong>Carlos M.</strong>
+                                <small>CEO, TechFlow</small>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-card glass reveal delay-200">
-                        <p class="quote">"La mejor inversión técnica que hemos hecho. Escalamos nuestra startup sin romper el código."</p>
+                    <div class="testimonial glass reveal delay-100">
+                        <p>"El sistema de IA me ahorra 20h semanales. Es como tener un empleado extra gratis."</p>
                         <div class="author">
-                            <div class="avatar"></div>
+                            <div class="avatar gradient-2">AR</div>
                             <div>
-                                <h4>David L.</h4>
-                                <small>Startup Founder</small>
+                                <strong>Ana R.</strong>
+                                <small>Directora, MarketingHub</small>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="brand-logo-glow">
-                    KANO
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="faq">
+        <section class="faq" id="faq">
             <div class="container faq__container">
-                <div class="faq__visual reveal">
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=2070&auto=format&fit=crop" alt="Código Matrix Seguro" class="matrix-img">
+                <div class="faq__text reveal">
+                    <h2 class="section-title">Dudas Frecuentes</h2>
+                    <p>Todo lo que necesitas saber antes de escalar.</p>
                 </div>
-                <div class="faq__content reveal delay-100">
-                    <h2 class="section-title">Preguntas Frecuentes</h2>
-                    
-                    <div class="accordion">
-                        <div class="accordion__item">
-                            <button class="accordion__header">
-                                ¿Es rentable para mi negocio?
-                                <span class="icon">+</span>
-                            </button>
-                            <div class="accordion__body">
-                                <p>Sí, se paga solo. Nuestras implementaciones están diseñadas para aumentar el ROI reduciendo costes operativos mediante automatización y aumentando la conversión de ventas.</p>
-                            </div>
-                        </div>
-
-                        <div class="accordion__item">
-                            <button class="accordion__header">
-                                ¿Cuánto tardan en desarrollar?
-                                <span class="icon">+</span>
-                            </button>
-                            <div class="accordion__body">
-                                <p>Trabajamos con Sprints ágiles. Un MVP (Producto Mínimo Viable) o una Landing Page de alta conversión suele estar lista en ciclos rápidos de 2 semanas.</p>
-                            </div>
-                        </div>
-
-                        <div class="accordion__item">
-                            <button class="accordion__header">
-                                ¿Necesito saber de tecnología?
-                                <span class="icon">+</span>
-                            </button>
-                            <div class="accordion__body">
-                                <p>No. Nosotros nos encargamos de toda la complejidad técnica (servidores, código, IA). Tú solo te encargas de recibir los resultados y atender a tus clientes.</p>
-                            </div>
-                        </div>
+                <div class="accordion reveal delay-100">
+                    <div class="accordion__item">
+                        <button class="accordion__header">¿Cuánto tardan en desarrollar? <span class="icon">+</span></button>
+                        <div class="accordion__body"><p>Nuestros Sprints son de 2 a 4 semanas para MVPs y Landing Pages de alta conversión.</p></div>
+                    </div>
+                    <div class="accordion__item">
+                        <button class="accordion__header">¿Es rentable para mi PYME? <span class="icon">+</span></button>
+                        <div class="accordion__body"><p>Absolutamente. Nos enfocamos en el ROI. Si no ganamos dinero para ti, no ganamos nosotros.</p></div>
                     </div>
                 </div>
             </div>
@@ -223,10 +192,24 @@
 
         <section id="contacto" class="cta-final">
             <div class="container reveal">
-                <h2 class="hero__title">¿Listo para <span class="text-gradient">escalar?</span></h2>
-                <p class="hero__subtitle">Agenda tu auditoría gratuita hoy y descubre dónde estás perdiendo dinero.</p>
-                <br>
-                <a href="mailto:hola@kanotech.com" class="btn btn--primary btn--lg glow-pulse">Agendar Auditoría Ahora</a>
+                <div class="cta-grid">
+                    <div class="cta-text">
+                        <h2 class="hero__title">¿Listo para <span class="text-gradient">escalar?</span></h2>
+                        <p>Déjanos tu correo y te contactaremos en menos de 15 minutos (Sí, usamos IA).</p>
+                    </div>
+                    
+                    <form id="leadForm" class="lead-form glass">
+                        <div class="input-group">
+                            <input type="email" id="emailInput" placeholder="tu@empresa.com" required>
+                            <span class="error-msg">Ingresa un email válido</span>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            Solicitar Acceso
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                        <p class="privacy-note">🔒 Datos encriptados. Cero Spam.</p>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -235,16 +218,52 @@
         <div class="container footer__content">
             <div class="footer__brand">
                 <h3>KANO TECHNOLOGY</h3>
-                <p>© 2026 Todos los derechos reservados.</p>
+                <p>© 2026. Todos los derechos reservados.</p>
             </div>
-            <div class="footer__links">
-                <a href="mailto:contact@kanotech.com">Email Corporativo</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
+            <div class="footer__legal">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Cookies</a>
+            </div>
+            <div class="footer__social">
+                <a href="#" aria-label="LinkedIn">LN</a>
+                <a href="#" aria-label="GitHub">GH</a>
             </div>
         </div>
     </footer>
 
+    <div id="caseModal" class="modal-overlay">
+        <div class="modal-content glass">
+            <button class="close-modal">&times;</button>
+            <h3 id="modalTitle">Caso de Éxito</h3>
+            
+            <div class="chart-wrapper">
+                <div class="chart-row">
+                    <span>Antes</span>
+                    <div class="bar start" style="width: 20%">20 leads</div>
+                </div>
+                <div class="chart-row">
+                    <span>Con Kano</span>
+                    <div class="bar end" style="width: 90%">+180 leads</div>
+                </div>
+            </div>
+            
+            <p id="modalDesc">Descripción del impacto generado.</p>
+            <button onclick="openCalendly()" class="btn btn--primary btn--full">Quiero estos resultados</button>
+        </div>
+    </div>
+
+    <div id="cookieBanner" class="cookie-banner glass">
+        <div class="cookie-content">
+            <span>🍪</span>
+            <p>Usamos cookies para mejorar tu experiencia.</p>
+        </div>
+        <div class="cookie-actions">
+            <button id="acceptCookies" class="btn btn--primary btn--xs">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <script src="script.js"></script>
 </body>
 </html>
