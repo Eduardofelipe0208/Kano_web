@@ -455,3 +455,53 @@ img { max-width: 100%; display: block; }
 .delay-100 { transition-delay: 0.1s; }
 .delay-200 { transition-delay: 0.2s; }
 .delay-300 { transition-delay: 0.3s; }
+
+/* --- ESTILOS PÁGINA LEGAL --- */
+.legal-content {
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.legal-content h1 {
+    font-family: var(--font-heading);
+    margin-bottom: 10px;
+    color: var(--primary);
+}
+
+.legal-content h2 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.legal-content h3 {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.legal-content p, .legal-content li {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    line-height: 1.8; /* Mejor lectura */
+}
+
+.legal-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.legal-content hr {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin: 40px 0;
+}
+
+.last-updated {
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.7;
+}
